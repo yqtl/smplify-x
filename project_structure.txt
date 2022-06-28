@@ -1,0 +1,170 @@
+.
+├── DATA_FOLDER
+│   ├── images
+│   │   └── HumanShape_rendered.png
+│   └── keypoints
+│       └── HumanShape_rendered_keypoints.json
+├── LICENSE
+├── OUTPUT_FOLDER
+│   ├── conf.yaml
+│   ├── images
+│   │   └── HumanShape_rendered
+│   │       └── 000
+│   ├── meshes
+│   │   └── HumanShape_rendered
+│   │       └── 000.obj
+│   └── results
+│       └── HumanShape_rendered
+│           └── 000.pkl
+├── README.md
+├── V02_05
+│   ├── V02_05.log
+│   ├── V02_05.yaml
+│   └── snapshots
+│       ├── V02_05_epoch=08_val_loss=0.03.ckpt
+│       └── V02_05_epoch=13_val_loss=0.03.ckpt
+├── cfg_files
+│   ├── fit_smpl.yaml
+│   ├── fit_smplh.yaml
+│   └── fit_smplx.yaml
+├── images
+│   └── teaser_fig.png
+├── models
+│   └── smplx
+│       ├── SMPLX_FEMALE.npz
+│       ├── SMPLX_FEMALE.pkl
+│       ├── SMPLX_MALE.npz
+│       ├── SMPLX_MALE.pkl
+│       ├── SMPLX_NEUTRAL.npz
+│       ├── SMPLX_NEUTRAL.pkl
+│       ├── smplx_npz.zip
+│       └── version.txt
+├── optional-requirements.txt
+├── project_structure.txt
+├── requirements.txt
+├── smplifyx
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── camera.cpython-36.pyc
+│   │   ├── cmd_parser.cpython-36.pyc
+│   │   ├── data_parser.cpython-36.pyc
+│   │   ├── fit_single_frame.cpython-36.pyc
+│   │   ├── fitting.cpython-36.pyc
+│   │   ├── mesh_viewer.cpython-36.pyc
+│   │   ├── prior.cpython-36.pyc
+│   │   └── utils.cpython-36.pyc
+│   ├── camera.py
+│   ├── cmd_parser.py
+│   ├── data_parser.py
+│   ├── fit_single_frame.py
+│   ├── fitting.py
+│   ├── main.py
+│   ├── mesh_viewer.py
+│   ├── optimizers
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── __init__.cpython-36.pyc
+│   │   │   ├── lbfgs_ls.cpython-36.pyc
+│   │   │   └── optim_factory.cpython-36.pyc
+│   │   ├── lbfgs_ls.py
+│   │   └── optim_factory.py
+│   ├── prior.py
+│   ├── render_pkl.py
+│   ├── render_results.py
+│   └── utils.py
+├── smplx_parts_segm.pkl
+├── src
+│   ├── human-body-prior
+│   │   ├── LICENSE
+│   │   ├── MANIFEST.in
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   ├── setup.py
+│   │   ├── src
+│   │   │   ├── __init__.py
+│   │   │   ├── human_body_prior
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── __pycache__
+│   │   │   │   │   └── __init__.cpython-36.pyc
+│   │   │   │   ├── body_model
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── body_model.py
+│   │   │   │   │   ├── lbs.py
+│   │   │   │   │   ├── parts_segm
+│   │   │   │   │   │   ├── readme
+│   │   │   │   │   │   └── smplh
+│   │   │   │   │   │       └── parts_segm.pkl
+│   │   │   │   │   └── rigid_object_model.py
+│   │   │   │   ├── data
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── dataloader.py
+│   │   │   │   │   └── prepare_data.py
+│   │   │   │   ├── models
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── __pycache__
+│   │   │   │   │   │   ├── __init__.cpython-36.pyc
+│   │   │   │   │   │   ├── model_components.cpython-36.pyc
+│   │   │   │   │   │   └── vposer_model.cpython-36.pyc
+│   │   │   │   │   ├── ik_engine.py
+│   │   │   │   │   ├── model_components.py
+│   │   │   │   │   └── vposer_model.py
+│   │   │   │   ├── tools
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── __pycache__
+│   │   │   │   │   │   ├── __init__.cpython-36.pyc
+│   │   │   │   │   │   ├── configurations.cpython-36.pyc
+│   │   │   │   │   │   ├── model_loader.cpython-36.pyc
+│   │   │   │   │   │   ├── rotation_tools.cpython-36.pyc
+│   │   │   │   │   │   └── tgm_conversion.cpython-36.pyc
+│   │   │   │   │   ├── angle_continuous_repres.py
+│   │   │   │   │   ├── configurations.py
+│   │   │   │   │   ├── model_loader.py
+│   │   │   │   │   ├── omni_tools.py
+│   │   │   │   │   ├── rotation_tools.py
+│   │   │   │   │   └── tgm_conversion.py
+│   │   │   │   ├── train
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── V02_05
+│   │   │   │   │   │   ├── V02_05.py
+│   │   │   │   │   │   ├── V02_05.yaml
+│   │   │   │   │   │   └── __init__.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   └── vposer_trainer.py
+│   │   │   │   └── visualizations
+│   │   │   │       ├── __init__.py
+│   │   │   │       └── training_visualization.py
+│   │   │   └── human_body_prior.egg-info
+│   │   │       ├── PKG-INFO
+│   │   │       ├── SOURCES.txt
+│   │   │       ├── dependency_links.txt
+│   │   │       └── top_level.txt
+│   │   ├── support_data
+│   │   │   ├── SMPL_inverse_kinematics.gif
+│   │   │   ├── dowloads
+│   │   │   │   └── amass_sample.npz
+│   │   │   ├── latent_interpolation_1.gif
+│   │   │   ├── latent_interpolation_2.gif
+│   │   │   ├── tutorial_sample_body_pose.png
+│   │   │   └── vposer_samples.png
+│   │   ├── tests
+│   │   │   ├── samples
+│   │   │   │   └── body_pose_rnd.npz
+│   │   │   ├── test_rotations.py
+│   │   │   └── test_vposer.py
+│   │   └── tutorials
+│   │       ├── __init__.py
+│   │       ├── ik_example_joints.py
+│   │       ├── ik_example_mocap.py
+│   │       ├── vposer.ipynb
+│   │       └── vposer_sampling.ipynb
+│   └── pip-delete-this-directory.txt
+├── vposer_v1_0
+│   ├── TR00_004_00_WO_accad.ini
+│   ├── snapshots
+│   │   └── TR00_E096.pt
+│   ├── version.txt
+│   └── vposer_smpl.py
+└── vposer_v1_0.zip
+
+45 directories, 122 files
