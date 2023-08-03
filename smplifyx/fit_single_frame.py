@@ -392,16 +392,21 @@ def fit_single_frame(img,
             opt_start = time.time()
 
             new_params = defaultdict(global_orient=orient,
-                                     body_pose=body_mean_pose)
+                                     body_pose=body_mean_pose,
+                                     betas=torch.tensor([[1.251267, -0.842499, -0.52248, -0.090623, 0.180624, 0.108004, 0.295259, 0.001036, -0.053281, -0.036678]]))
             body_model.reset_params(**new_params)
+            print('body_model:   ', body_model)
             if use_vposer:
                 with torch.no_grad():
                     pose_embedding.fill_(0)
 
+            body_model.betas.requires_grad = False
             for opt_idx, curr_weights in enumerate(tqdm(opt_weights, desc='Stage')):
 
+                print('    body_model betas: ', body_model.betas)
                 body_params = list(body_model.parameters())
 
+                print('body_params: ',body_params)
                 final_params = list(
                     filter(lambda x: x.requires_grad, body_params))
 
@@ -411,6 +416,7 @@ def fit_single_frame(img,
                 body_optimizer, body_create_graph = optim_factory.create_optimizer(
                     final_params,
                     **kwargs)
+                #print('final_params: ', final_params)
                 body_optimizer.zero_grad()
 
                 curr_weights['data_weight'] = data_weight
